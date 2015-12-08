@@ -1,5 +1,6 @@
 package xogame.model;
 
+import boardgame.model.Figure;
 import boardgame.model.Game;
 import boardgame.model.Player;
 import xogame.model.figures.FigureO;
@@ -35,15 +36,34 @@ public class GameXO implements Game {
 		return figureX;
 	}
 	
-	public Player getPlayer1() {
-		return player1;
+	public String getPlayer1Name() {
+		return player1.getName();
 	}
 	
-	public Player getPlayer2() {
-		return player2;
+	public void setPlayer1Name(final String name) {
+		player1.setName(name);
+	}
+	
+	public String getPlayer2Name() {
+		return player2.getName();
+	}
+	
+	public void setPlayer2Name(final String name) {
+		player2.setName(name);
+	}
+	
+	public Figure getFigureAt(int rowNum, int colNum) {
+		return boardXO.getFigureAt(rowNum, colNum);
+	}
+	
+	public void setFigureAt(int rowNum, int colNum, final Figure figure) {
+		boardXO.setFigureAt(rowNum, colNum, figure);
+		
+	}
+	
+	public boolean isFigureSet(int rowNum, int colNum) {
+		return boardXO.isFigureSet(rowNum, colNum);
 	}
 
-	public BoardXO getBoardXO() {
-		return boardXO;
-	}
+	
 }
