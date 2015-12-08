@@ -2,7 +2,7 @@ package xogame.model;
 
 import boardgame.model.Cell;
 import boardgame.model.IBoard;
-import boardgame.model.IFigure;
+import boardgame.model.Figure;
 
 public class BoardXO implements IBoard {
 	
@@ -44,12 +44,12 @@ public class BoardXO implements IBoard {
 	}
 
 	@Override
-	public IFigure getFigureAt(int rowNum, int colNum) {
+	public Figure getFigureAt(int rowNum, int colNum) {
 		return cells[rowNum][colNum].getFigure();
 	}
 
 	@Override
-	public void setFigureAt(int rowNum, int colNum, IFigure figure) {
+	public void setFigureAt(int rowNum, int colNum, Figure figure) {
 		cells[rowNum][colNum].setFigure(figure);
 	}
 
