@@ -11,4 +11,8 @@ public class PlayerX extends Player {
 		super(name);
 		figure = new FigureX();
 	}
+	
+	public Figure getFigure() {
+		return figure;
+	}
 }
