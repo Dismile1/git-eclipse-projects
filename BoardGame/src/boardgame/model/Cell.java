@@ -1,20 +1,20 @@
 package boardgame.model;
 
 public class Cell {
-	IFigure figure;
+	Figure figure;
 	
 	public Cell() {
 		figure = null;
 	}
 	
-	public Cell(final IFigure figure) {
+	public Cell(final Figure figure) {
 		this.figure=figure;
 	}
-	public IFigure getFigure() {
+	public Figure getFigure() {
 		return figure;
 	}
 	
-	public void setFigure(final IFigure figure) {
+	public void setFigure(final Figure figure) {
 		this.figure=figure;
 	}
 	
