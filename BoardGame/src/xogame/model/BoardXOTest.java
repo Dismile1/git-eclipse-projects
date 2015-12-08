@@ -132,5 +132,84 @@ public class BoardXOTest {
 		assertTrue(boardXO.isFigureSet(2, 1));
 		assertTrue(boardXO.isFigureSet(2, 2));
 	}
+	
+	@Test
+	public void testClearBoard() {
+		BoardXO boardXO = new BoardXO();
+		
+		assertFalse(boardXO.isFigureSet(0, 0));
+		assertFalse(boardXO.isFigureSet(0, 1));
+		assertFalse(boardXO.isFigureSet(0, 2));
+		assertFalse(boardXO.isFigureSet(1, 0));
+		assertFalse(boardXO.isFigureSet(1, 1));
+		assertFalse(boardXO.isFigureSet(1, 2));
+		assertFalse(boardXO.isFigureSet(2, 0));
+		assertFalse(boardXO.isFigureSet(2, 1));
+		assertFalse(boardXO.isFigureSet(2, 2));
+		
+		boardXO.setFigureAt(0, 0, figureX);
+		boardXO.setFigureAt(0, 1, figureX);
+		boardXO.setFigureAt(0, 2, figureX);
+		boardXO.setFigureAt(1, 0, figureX);
+		boardXO.setFigureAt(1, 1, figureX);
+		boardXO.setFigureAt(1, 2, figureX);
+		boardXO.setFigureAt(2, 0, figureX);
+		boardXO.setFigureAt(2, 1, figureX);
+		boardXO.setFigureAt(2, 2, figureX);
+		
+		assertTrue(boardXO.isFigureSet(0, 0));
+		assertTrue(boardXO.isFigureSet(0, 1));
+		assertTrue(boardXO.isFigureSet(0, 2));
+		assertTrue(boardXO.isFigureSet(1, 0));
+		assertTrue(boardXO.isFigureSet(1, 1));
+		assertTrue(boardXO.isFigureSet(1, 2));
+		assertTrue(boardXO.isFigureSet(2, 0));
+		assertTrue(boardXO.isFigureSet(2, 1));
+		assertTrue(boardXO.isFigureSet(2, 2));
+		
+		boardXO.clearBoard();
+		
+		assertFalse(boardXO.isFigureSet(0, 0));
+		assertFalse(boardXO.isFigureSet(0, 1));
+		assertFalse(boardXO.isFigureSet(0, 2));
+		assertFalse(boardXO.isFigureSet(1, 0));
+		assertFalse(boardXO.isFigureSet(1, 1));
+		assertFalse(boardXO.isFigureSet(1, 2));
+		assertFalse(boardXO.isFigureSet(2, 0));
+		assertFalse(boardXO.isFigureSet(2, 1));
+		assertFalse(boardXO.isFigureSet(2, 2));
+		
+		boardXO.setFigureAt(0, 0, figureO);
+		boardXO.setFigureAt(0, 1, figureO);
+		boardXO.setFigureAt(0, 2, figureO);
+		boardXO.setFigureAt(1, 0, figureO);
+		boardXO.setFigureAt(1, 1, figureO);
+		boardXO.setFigureAt(1, 2, figureO);
+		boardXO.setFigureAt(2, 0, figureO);
+		boardXO.setFigureAt(2, 1, figureO);
+		boardXO.setFigureAt(2, 2, figureO);
+		
+		assertTrue(boardXO.isFigureSet(0, 0));
+		assertTrue(boardXO.isFigureSet(0, 1));
+		assertTrue(boardXO.isFigureSet(0, 2));
+		assertTrue(boardXO.isFigureSet(1, 0));
+		assertTrue(boardXO.isFigureSet(1, 1));
+		assertTrue(boardXO.isFigureSet(1, 2));
+		assertTrue(boardXO.isFigureSet(2, 0));
+		assertTrue(boardXO.isFigureSet(2, 1));
+		assertTrue(boardXO.isFigureSet(2, 2));
+		
+		boardXO.clearBoard();
+		
+		assertFalse(boardXO.isFigureSet(0, 0));
+		assertFalse(boardXO.isFigureSet(0, 1));
+		assertFalse(boardXO.isFigureSet(0, 2));
+		assertFalse(boardXO.isFigureSet(1, 0));
+		assertFalse(boardXO.isFigureSet(1, 1));
+		assertFalse(boardXO.isFigureSet(1, 2));
+		assertFalse(boardXO.isFigureSet(2, 0));
+		assertFalse(boardXO.isFigureSet(2, 1));
+		assertFalse(boardXO.isFigureSet(2, 2));
+	}
 
 }
