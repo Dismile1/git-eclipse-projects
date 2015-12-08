@@ -1,4 +1,4 @@
-package xogame.model;
+package xogame.model.figures;
 
 import boardgame.model.Figure;
 
