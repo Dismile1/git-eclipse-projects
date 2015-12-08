@@ -5,12 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class CellTest {
-	IFigure figure = new IFigure() {	
-		@Override
-		public String getName() {
-			return "figure";
-		}
-	};
+	Figure figure = new Figure("figure");
 	
 	@Test
 	public void testCell() {
