@@ -1,10 +1,10 @@
 package xogame.model;
 
 import boardgame.model.Cell;
-import boardgame.model.IBoard;
+import boardgame.model.Board;
 import boardgame.model.Figure;
 
-public class BoardXO implements IBoard {
+public class BoardXO implements Board {
 	
 	private final int height;
 	private final int width;
