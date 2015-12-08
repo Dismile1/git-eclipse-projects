@@ -1,7 +1,7 @@
 package boardgame.model;
 
 public class Figure {
-	private String name;
+	private final String name;
 	
 	public Figure(final String name) {
 		this.name=name;
