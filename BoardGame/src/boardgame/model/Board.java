@@ -1,6 +1,6 @@
 package boardgame.model;
 
-public interface IBoard {
+public interface Board {
 	public int getHeight();
 	public int getWidth();
 	public Figure getFigureAt(int rowNum, int colNum);
