@@ -32,6 +32,14 @@ public class BoardXO implements Board {
 		}
 	}
 	
+	public void clearBoard() {
+		for(int i = 0; i<height; i++) {
+			for(int j=0; j<width; j++) {
+				cells[i][j].setFigure(null);
+			}
+		}
+	}
+	
 
 	@Override
 	public int getHeight() {
