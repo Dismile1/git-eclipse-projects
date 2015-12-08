@@ -51,12 +51,12 @@ public class GameXO implements Game {
 		return boardXO.getFigureAt(rowNum, colNum);
 	}
 	
-	public void setFigureXAt(int rowNum, int colNum) {
-		boardXO.setFigureAt(rowNum, colNum, playerX.getFigure());		
+	public void setXFigureAt(int rowNum, int colNum) {
+		boardXO.setFigureAt(rowNum, colNum, playerX.getFigure());
 	}
 	
-	public void setFigureOAt(int rowNum, int colNum) {
-		boardXO.setFigureAt(rowNum, colNum, playerO.getFigure());		
+	public void setOFigureAt(int rowNum, int colNum) {
+		boardXO.setFigureAt(rowNum, colNum, playerO.getFigure());
 	}
 	
 	public boolean isFigureSet(int rowNum, int colNum) {
