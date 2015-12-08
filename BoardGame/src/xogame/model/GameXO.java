@@ -1,11 +1,11 @@
 package xogame.model;
 
-import boardgame.model.IGame;
+import boardgame.model.Game;
 import boardgame.model.Player;
 import xogame.model.figures.FigureO;
 import xogame.model.figures.FigureX;
 
-public class GameXO implements IGame {
+public class GameXO implements Game {
 	private final String name;
 	private final BoardXO boardXO;
 	private final Player player1;
