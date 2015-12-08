@@ -1,5 +1,5 @@
 package boardgame.model;
 
-public interface IGame {
+public interface Game {
 	public String getName();
 }
