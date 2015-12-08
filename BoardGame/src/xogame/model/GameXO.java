@@ -2,24 +2,19 @@ package xogame.model;
 
 import boardgame.model.Figure;
 import boardgame.model.Game;
-import boardgame.model.Player;
-import xogame.model.figures.FigureO;
-import xogame.model.figures.FigureX;
+import xogame.model.players.PlayerO;
+import xogame.model.players.PlayerX;
 
 public class GameXO implements Game {
 	private final String name;
 	private final BoardXO boardXO;
-	private final Player player1;
-	private final Player player2;
-	private final FigureO figureO;
-	private final FigureX figureX;
+	private final PlayerX playerX;
+	private final PlayerO playerO;
 	
-	public GameXO(final BoardXO boardXO, final Player player1, final Player player2) {
+	public GameXO(final BoardXO boardXO, final PlayerX playerX, final PlayerO playerO) {
 		name = Constants.XO_GAME_NAME;
-		figureX = new FigureX();
-		figureO = new FigureO();
-		this.player1 = player1;
-		this.player2 = player2;
+		this.playerX = playerX;
+		this.playerO = playerO;
 		this.boardXO = boardXO;
 	}
 	
@@ -28,28 +23,28 @@ public class GameXO implements Game {
 		return name;
 	}
 	
-	public FigureO getFigureO() {
-		return figureO;
+	public Figure getFigureO() {
+		return playerO.getFigure();
 	}
 	
-	public FigureX getFigureX() {
-		return figureX;
+	public Figure getFigureX() {
+		return playerX.getFigure();
 	}
 	
-	public String getPlayer1Name() {
-		return player1.getName();
+	public String getPlayerXName() {
+		return playerX.getName();
 	}
 	
-	public void setPlayer1Name(final String name) {
-		player1.setName(name);
+	public void setPlayerXName(final String name) {
+		playerX.setName(name);
 	}
 	
-	public String getPlayer2Name() {
-		return player2.getName();
+	public String getPlayerOName() {
+		return playerO.getName();
 	}
 	
-	public void setPlayer2Name(final String name) {
-		player2.setName(name);
+	public void setPlayerOName(final String name) {
+		playerO.setName(name);
 	}
 	
 	public Figure getFigureAt(int rowNum, int colNum) {
