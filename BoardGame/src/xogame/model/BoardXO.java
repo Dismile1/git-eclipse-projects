@@ -3,6 +3,7 @@ package xogame.model;
 import boardgame.model.Cell;
 import boardgame.model.Board;
 import boardgame.model.Figure;
+import boardgame.model.Point;
 
 public class BoardXO implements Board {
 	
@@ -52,18 +53,25 @@ public class BoardXO implements Board {
 	}
 
 	@Override
-	public Figure getFigureAt(int rowNum, int colNum) {
-		return cells[rowNum][colNum].getFigure();
+	public Figure getFigureAt(Point point) {
+		int row = point.getRowNumber();
+		int col = point.getColumnNumber();
+		return cells[row][col].getFigure();
 	}
 
 	@Override
-	public void setFigureAt(int rowNum, int colNum, Figure figure) {
-		cells[rowNum][colNum].setFigure(figure);
+	public void setFigureAt(Point point, Figure figure) {
+
+		int row = point.getRowNumber();
+		int col = point.getColumnNumber();
+		cells[row][col].setFigure(figure);
 	}
 
 	@Override
-	public boolean isFigureSet(int rowNum, int colNum) {
-		return cells[rowNum][colNum].isSet();
+	public boolean isFigureSet(Point point) {
+		int row = point.getRowNumber();
+		int col = point.getColumnNumber();
+		return cells[row][col].isSet();
 	}
 
 }
