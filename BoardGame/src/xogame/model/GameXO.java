@@ -48,6 +48,14 @@ public class GameXO implements Game {
 		playerO.setName(name);
 	}
 	
+	public int getBoardHeight() {
+		return boardXO.getHeight();
+	}
+	
+	public int getBoardWidth() {
+		return boardXO.getWidth();
+	}
+	
 	public Figure getFigureAt(final Point point) {
 		return boardXO.getFigureAt(point);
 	}
