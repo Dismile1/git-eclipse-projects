@@ -2,6 +2,7 @@ package xogame.model;
 
 import boardgame.model.Figure;
 import boardgame.model.Game;
+import boardgame.model.Point;
 import xogame.model.players.PlayerO;
 import xogame.model.players.PlayerX;
 
@@ -47,20 +48,20 @@ public class GameXO implements Game {
 		playerO.setName(name);
 	}
 	
-	public Figure getFigureAt(int rowNum, int colNum) {
-		return boardXO.getFigureAt(rowNum, colNum);
+	public Figure getFigureAt(final Point point) {
+		return boardXO.getFigureAt(point);
 	}
 	
-	public void setXFigureAt(int rowNum, int colNum) {
-		boardXO.setFigureAt(rowNum, colNum, playerX.getFigure());
+	public void setXFigureAt(final Point point) {
+		boardXO.setFigureAt(point, playerX.getFigure());
 	}
 	
-	public void setOFigureAt(int rowNum, int colNum) {
-		boardXO.setFigureAt(rowNum, colNum, playerO.getFigure());
+	public void setOFigureAt(final Point point) {
+		boardXO.setFigureAt(point, playerO.getFigure());
 	}
 	
-	public boolean isFigureSet(int rowNum, int colNum) {
-		return boardXO.isFigureSet(rowNum, colNum);
+	public boolean isFigureSet(final Point point) {
+		return boardXO.isFigureSet(point);
 	}
 	
 	public void clearBoard() {
