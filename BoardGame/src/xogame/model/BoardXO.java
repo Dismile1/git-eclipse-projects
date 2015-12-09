@@ -53,21 +53,21 @@ public class BoardXO implements Board {
 	}
 
 	@Override
-	public Figure getFigureAt(Point point) {
+	public Figure getFigureAt(final Point point) {
 		int row = point.getRowNumber();
 		int col = point.getColumnNumber();
 		return cells[row][col].getFigure();
 	}
 
 	@Override
-	public void setFigureAt(Point point, Figure figure) {
+	public void setFigureAt(final Point point, final Figure figure) {
 		int row = point.getRowNumber();
 		int col = point.getColumnNumber();
 		cells[row][col].setFigure(figure);
 	}
 
 	@Override
-	public boolean isFigureSet(Point point) {
+	public boolean isFigureSet(final Point point) {
 		int row = point.getRowNumber();
 		int col = point.getColumnNumber();
 		return cells[row][col].isSet();
