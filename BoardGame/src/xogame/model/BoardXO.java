@@ -61,7 +61,6 @@ public class BoardXO implements Board {
 
 	@Override
 	public void setFigureAt(Point point, Figure figure) {
-
 		int row = point.getRowNumber();
 		int col = point.getColumnNumber();
 		cells[row][col].setFigure(figure);
